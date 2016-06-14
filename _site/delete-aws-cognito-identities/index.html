@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Amazon AWS Quick Tips - Delete all AWS Cognito identities</title>
+    
+    <meta name="author" content="Peter ADAM">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/resources/syntax/syntax.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/ico/favicon.ico">
+
+    <!-- Le fav and touch icons -->
+    <!-- Update these with your own images
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	-->
+
+    <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default visible-xs visible-sm" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            <a type="button" class="navbar-toggle nav-link visible-xs visible-sm" href="http://github.com/hybilelabs">
+                <i class="fa fa-github"></i>
+            </a>
+            
+            
+            <a type="button" class="navbar-toggle nav-link visible-xs visible-sm" href="http://twitter.com/hybilelabs">
+                <i class="fa fa-twitter"></i>
+            </a>
+            
+            
+            <a class="navbar-brand" href="/">
+                <img src="http://www.gravatar.com/avatar/6633adaf5c92268cd3c51cb670d40bc2?s=35" class="img-circle" />
+                blog.hybile.io
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav visible-xs visible-sm">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/categories/">Categories</a></li>
+                <!--<li><a href="/">Tags</a></li>-->
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <!-- nav-menu-dropdown -->
+    <div class="btn-group hidden-xs hidden-sm" id="nav-menu">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-bars"></i>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="/categories/"><i class="fa fa-folder"></i>Categories</a></li>
+            <!--<li><a href="/"><i class="fa fa-tags"></i>Tags</a></li>-->
+            <li class="divider"></li>
+            <li><a href="#"><i class="fa fa-arrow-up"></i>Top of Page</a></li>
+        </ul>
+    </div>
+
+    <div class="col-sm-4 sidebar hidden-xs hidden-sm not-mobile">
+        <!-- sidebar.html -->
+<header class="sidebar-header" role="banner">
+	<a href="/">
+		<!--<h1 class="text-center">blog.hybile.io</h1>-->
+		<img src="http://www.gravatar.com/avatar/6633adaf5c92268cd3c51cb670d40bc2?s=150" class="img-circle" />
+	</a>
+	<h3 class="title">
+		<a href="/">blog.hybile.io</a>
+	</h3>
+</header>
+
+
+<div id="bio" class="text-center">
+	3D Mobile and Web Solutions &amp; Amazon AWS Backends
+</div>
+
+
+<div id="contact-list" class="text-center">
+	<ul class="list-unstyled list-inline">
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://github.com/hybilelabs">
+				<i class="fa fa-github-alt fa-lg"></i>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://twitter.com/hybilelabs">
+				<i class="fa fa-twitter fa-lg"></i>
+			</a>
+		</li>
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="/feed.xml">
+				<i class="fa fa-rss fa-lg"></i>
+			</a>
+		</li>
+	</ul>
+
+	<div class="sidebar-content">
+
+		<nav id="page-nav">
+			<ul class="main-navigation list-unstyled list-inline">
+				<li><a href="/../about/">About</a></li>
+				<li><a href="/articles">Articles</a></li>
+				<li><a href="/videos">Videos</a></li>
+			</ul>
+		</nav>
+
+		<h5>Recent Posts</h5>
+		<ul class="list-unstyled">
+			
+				<li>
+					<span>14 Jun 2016</span> &raquo;
+					<a href="/delete-aws-cognito-identities/">
+					Amazon AWS Quick Tips - Delete all AWS Cognito identities</a>
+				</li>
+			
+		</ul>
+	</div>
+
+</div>
+<!-- sidebar.html end -->
+        <div class="not-mobile row sidebar-extras">
+            <table class="col-centered">
+                <tbody>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <div class="page-header">
+  <h1>Amazon AWS Quick Tips - Delete all AWS Cognito identities </h1>
+</div>
+	
+<article>
+
+	<div class="col-sm-10">
+	 <span class="post-date">
+	   
+	   June 
+	   14th,
+	   
+	   2016
+	 </span>
+	  <div class="article_body">
+	  <p>AWS Console does not provide a way to <strong>delete all of the identities in your identity pool</strong>. AWS CLI does.</p>
+
+<h3 id="install-jq">Install jq</h3>
+
+<p>If <code>jq</code> is not installed on your machine, follow the instructions on <a href="https://stedolan.github.io/jq/">jq website</a>.</p>
+
+<h3 id="know-your-identity-pool-id">Know your identity pool id</h3>
+
+<p>Find the identity pool id you want to work with. You can use the AWS Console or the following command, by replacing the YOUR_REGION code to the desired region code:</p>
+
+<pre><code class="language-sh">aws cognito-identity list-identity-pools --max-results 60 --region [YOUR_REGION]
+</code></pre>
+
+<h3 id="listing-the-identites">Listing the identites</h3>
+<p>Armed with the identity pool id, use the following command to list the first 60 identities in your identity pool, coma separated:</p>
+
+<pre><code class="language-sh">aws cognito-identity list-identities --region [YOUR_REGION] --identity-pool-id [YOUR_IDENTITY_POOL_ID] --max-results 60 | jq -r '.Identities | map(.IdentityId) | join("\" \"")' | sed -e 's/\(.*\)/\"\1\"/'
+</code></pre>
+
+<h3 id="deleting-the-identites">Deleting the identites</h3>
+<p>We were selecting only 60 identites because this is a limitation on the <code>delete-identities</code> function. Copy the result and paste it into the following command:</p>
+
+<pre><code class="language-sh">cognito-identity delete-identities --region [YOUR_REGION] --identity-ids-to-delete
+</code></pre>
+
+<h3 id="merging-all-together">Merging all together</h3>
+<p>Do you want to delete the next 60 identities with a single command? Run the following:</p>
+
+<pre><code class="language-sh">aws cognito-identity list-identities --region [YOUR_REGION] --identity-pool-id [YOUR_IDENTITY_POOL_ID] --max-results 60 | jq -r '.Identities | map(.IdentityId) | join("\" \"")' | sed -e 's/\(.*\)/\"\1\"/' | xargs aws cognito-identity delete-identities --region [YOUR_REGION] --identity-ids-to-delete
+</code></pre>
+
+	  </div>
+
+		
+		<ul class="tag_box list-unstyled list-inline">
+		  <li><i class="fa fa-folder-open"></i></li>
+		  
+		  
+			 
+				<li><a href="/categories/#AWS Cognito-ref">
+					AWS Cognito <span>(1)</span>
+					,
+				</a></li>
+			 
+				<li><a href="/categories/#AWS-CLI-ref">
+					AWS-CLI <span>(1)</span>
+					,
+				</a></li>
+			 
+				<li><a href="/categories/#JQ-ref">
+					JQ <span>(1)</span>
+					
+				</a></li>
+			
+		  
+		</ul>
+		  
+
+		  
+
+		<hr>
+
+		<div>
+      <section class="share col-sm-6">
+        <h4 class="section-title">Share Post</h4>
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Amazon AWS Quick Tips - Delete all AWS Cognito identities&via=hybilelabs"
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <i class="fa fa-twitter fa-lg"></i>
+          Twitter
+        </a>
+        <a class="btn btn-default btn-sm facebook" href="https://www.facebook.com/sharer/sharer.php"
+           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+          <i class="fa fa-facebook fa-lg"></i>
+          Facebook
+        </a>
+        <a class="btn btn-default btn-sm gplus"
+           onclick="window.open('https://plus.google.com/share?url='+window.location.href, 'google-plus-share', 'width=490,height=530');return false;">
+          <i class="fa fa-google-plus fa-lg"></i>
+          Google+
+        </a>
+      </section>
+
+      <section class="col-sm-6 author">
+        <img src="http://www.gravatar.com/avatar/6633adaf5c92268cd3c51cb670d40bc2" class="img-rounded author-image" />
+        <h4 class="section-title author-name">Peter ADAM</h4>
+        <p class="author-bio">3D Mobile and Web Solutions &amp; Amazon AWS Backends</p>
+      </section>
+    </div>
+
+    <div class="clearfix"></div>
+
+		<ul class="pager">
+		  
+		  <li class="previous disabled"><a>&larr; Previous</a></li>
+		  
+		  
+			<li class="next disabled"><a>Next &rarr;</a>
+		  
+		</ul>
+
+		<hr>
+	</div>
+	
+	<div class="col-sm-2 sidebar-2">
+	
+	</div>
+</article>
+<div class="clearfix"></div>
+
+
+
+    
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'hybile';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+      <footer class="footer-text">
+        <hr/>
+        <p>
+        Copyright © 2016 - Hybile Blog content licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>
+        | Unless otherwise stated or granted, code samples licensed under the <a href="http://sm.mit-license.org/">MIT license</a>.
+        | Site design based on the <a href="https://github.com/dbtek/dbyll">dbyll theme</a> under the <a href="http://sm.mit-license.org/">MIT license</a>
+      </p>
+
+      </footer>
+
+    </div>
+
+    <script type="text/javascript" src="/assets/resources/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/app.js"></script>
+
+</body>
+
+</html>
+
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-XXXXXXX-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+

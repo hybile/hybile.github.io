@@ -1,0 +1,38 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10
+paginate_path: "page:num"
+exclude: ["README.md", "vendor"] # files to exclude
+highlighter: pygments
+markdown: kramdown
+disqus: hybile
+title: blog.hybile.io
+google_analytics: UA-XXXXXXX-1
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: blog.hybile.io
+
+description: Hybile Blog
+author:
+  name: Peter ADAM
+  github: hybilelabs
+  twitter: hybilelabs
+  bio: 3D Mobile and Web Solutions &amp; Amazon AWS Backends 
+  email_md5: 6633adaf5c92268cd3c51cb670d40bc2
+
+permalink: /:title/
+
+gems: ["jekyll-paginate"]
+
+github_repo_url: https://github.com/hybilelabs/hybile.github.io/
+
+rss_path: feed.xml
+rss_url: http://feeds.feedburner.com/hybile
+categories_path: categories/
+#tags_path: tags.html
+
+BASE_PATH:
